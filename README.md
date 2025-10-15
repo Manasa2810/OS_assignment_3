@@ -63,7 +63,7 @@ int sys_pgpte(void) {
 
 **6. `test.c`**
 
-* Wrote a test program that calls `pgpte()` for the first and last 10 pages using the helper functions `print_pt()` and `print_pte()`.
+* modified test program that calls `pgpte()` for the first and last 10 pages using the helper functions `print_pt()` and `print_pte()`.
 * The program prints each virtual address, PTE, physical address, and access permission (AP bits).
 
 ---
