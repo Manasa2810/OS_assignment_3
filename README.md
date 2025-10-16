@@ -69,11 +69,11 @@ int sys_pgpte(void) {
 ---
 
 We modified the test.c to the version of our os.
-Output Example
-VA 0x00000000 -> PA 0x00101000 | PTE=0x00101007 | Flags: P W U
-VA 0x00001000 -> PA 0x00102000 | PTE=0x00102007 | Flags: P W U
+Output Example<br>
+VA 0x00000000 -> PA 0x00101000 | PTE=0x00101007 | Flags: P W U<br>
+VA 0x00001000 -> PA 0x00102000 | PTE=0x00102007 | Flags: P W U<br>
 ...
-VA 0xBFFFF000 -> PA 0x002A4000 | PTE=0x002A4005 | Flags: P U
+VA 0xBFFFF000 -> PA 0x002A4000 | PTE=0x002A4005 | Flags: P U<br>
 
 Explanation of Bits
 Bit	Symbol	Meaning
