@@ -69,4 +69,24 @@ int sys_pgpte(void) {
 ---
 
 We modified the test.c to the version of our os.
+Output Example
+VA 0x00000000 -> PA 0x00101000 | PTE=0x00101007 | Flags: P W U
+VA 0x00001000 -> PA 0x00102000 | PTE=0x00102007 | Flags: P W U
+...
+VA 0xBFFFF000 -> PA 0x002A4000 | PTE=0x002A4005 | Flags: P U
+
+Explanation of Bits
+Bit	Symbol	Meaning
+0	P	Page Present in Memory
+1	W	Writable
+2	U	User Accessible
+3–11	—	OS/Reserved bits
+12–31	Physical Page Frame Address	Base physical address of the page
+Interpretation
+
+The first 10 pages belong to the program’s code, data, and stack.
+
+The last 10 pages usually include kernel space mappings (often only P bit set, no U access).
+
+PTE=0 means the virtual page is not mapped.
 
